@@ -1,132 +1,62 @@
-# Demo Online
+<p align="center">
+  <img src="https://coopers.pro/assets/img/coopers-brand.png" alt="Marca da Coopers" />
+</p>
 
-Você pode acessar o sistema online aqui:  
-[https://macho-pistachio.localsite.io](https://macho-pistachio.localsite.io)
+<p align="center">
+  <em>Fast, flexible, trustful.</em>
+</p>
 
-É um Live Link do LocalWP, então tem que estar rodando no meu computador para conseguir acessar.
+# Avaliação Front-end Developer
 
-# 📌 Introdução
+O intuito deste documento é apresentar os pré-requisitos para a avaliação técnica do desenvolvedor front-end, com base em layout criado por nossa equipe especificamente para esta finalidade.
 
-O objetivo deste projeto foi desenvolver uma aplicação wordpress com foco em **fidelidade ao layout Figma** e **abordagem mobile-first**. A aplicação deveria conter:
+## Briefing
 
-- Um tema customizado Wordpress com layout fiel ao figma, funcionando em todos os navegadores mais utilizados atualmente;
-- Ajustes de conteúdos dinâmicos, podendo ser atualizado pelo painel da plataforma por meio do plugin Advanced Custom Fields;
+Podemos dividir esta avaliação em duas principais etapas:
 
-O front-end foi desenvolvido com **Wordpress**, e com o tema **Underscores** e plugin **ACF**, com atenção especial à **responsividade, customização pelo painel e organização do código**.
+1. Desenvolvimento front-end do layout [disponível neste link](https://www.figma.com/file/o0u8SSXuTNpaYEU78rCo5u/Coopers---Site-para-teste-Front-End?node-id=3299%3A330), sendo o mais fiel possível em todos os navegadores mais utilizados na atualidade: Chrome, Safari, Firefox e Microsoft Edge.
+2. Implementação do front-end como tema customizado do Wordpress, tendo todo o seu conteúdo dinâmico, permitindo atualização através do painel administrativo da plataforma. É obrigatório o uso do plugin [Advanced Custom Fields](https://advancedcustomfields.com/) para a criação dos campos customizados, pois utilizamos em todos os nossos projetos.
 
-# 🧠 Planejamento
+## Critérios de avaliação
 
-Iniciei o projeto com uma fase de estudo e planejamento detalhado:
+### HTML
 
-- Análise do layout no Figma;
-- Estimativas de esforço por funcionalidade;
+Avaliaremos a qualidade do código escrito, desde a correta utilização de tags de acordo com sua semântica, como o aspecto de Acessibilidade seguindo as boas práticas dos padrões WCAG para uso de atributos e renderização do conteúdo sem dependência de CSS e/ou JavaScript.
 
-Esse planejamento me ajudou a manter o foco durante o desenvolvimento e entregas diárias.
+Além da semântica, avaliaremos a inserção de comentários, uso coerente de classes e ID's nas tags e código enxuto, sem redundâncias.
 
-# 🛠 Tecnologias Utilizadas
+*Dica de ferramenta para avaliação de acessibilidade: [WAVE](https://wave.webaim.org/)*
 
-### Front-end
+### CSS
 
-- **Wordpress**
-- **Underscores** (tema base)
-- **ACF** (plugin Advanced Custom Fields)
+A entrega deve ser Responsive, ou seja, adaptação da interface para telas grandes (desktop), médias (tablets) e pequenas (celulares), porém essa adaptação fica a critério do desenvolvedor, não havendo indicação das alterações visuais para as telas menores no layout.
 
-### Outros
+Além da correta reprodução do design, avaliaremos o código CSS quanto a conceitos de performance, coerência, lógica de estruturação de componentes, uso de propriedades e compatibilidade entre os navegadores.
 
-- **Git** (versionamento e controle de código)
-- **LocalWP** (ambiente de desenvolvimento local)
-- **MySQL** (banco de dados relacional)
-- **Nginx** (servidor web)
+**É imprescindível o uso da metodologia Mobile First para a aplicação do Responsive**.
 
-# ⚙️ Desenvolvimento
+### JavaScript
 
-### Cronograma de execução:
+Pode ser usado tanto JavaScript "Vanilla" como jQuery nesta página para criação dos sliders e demais comportamentos em que for necessário. Também avaliaremos o comportamento da página com e sem JS ativado no navegador, por motivos de Acessibilidade e Performance.
 
-1. Estudo, planejamento e estrutura inicial do front-end;
-2. Interface e primeiros template-parts;
-3. Carrossel, formulário e footer;
-4. Deploy com Live Link, testes manuais e documentação.
+### Performance
 
-Durante o desenvolvimento, busquei equilibrar **entregas funcionais**, **qualidade visual** e **bom uso do plugin ACF**, mesmo em aspectos que exigiram aprendizado durante a execução.
+Avaliaremos as medidas utilizadas para garantir uma boa performance de carregamento e renderização da página.
 
-## 📐 HTML e Componentização
+### Wordpress
 
-- Estrutura semântica e acessível;
-- Reaproveitamento de código sempre que possível;
-- Template parts e css distintos, mantidos separados por clareza;
-- Escolhas feitas visando legibilidade e manutenibilidade do projeto.
+Como ponto de partida, recomendamos o uso do [Underscores](https://underscores.me/) como tema base para o Wordpress, pois ele já possui toda a estrutura mínima necessária para o funcionamento do tema customizado.
+Nosso critério de avaliação inclui a correta estruturação do tema, usando as recomendações do CMS, além da lógica utilizada para exibir os dados dinâmicos no tema, principalmente os campos customizados via Advanced Custom Fields.
 
-🛠️ _Próximos passos_: planejo modularizar mais alguns template-parts, e padronizar classes para facilitar escalabilidade em projetos maiores.
+## Prazo
 
-## 🎨 CSS e Responsividade
+O prazo para entrega fica a critério do desenvolvedor.
 
-- Uso de CSS e separação por arquivos;
-- Layout mobile simplificado (sem imagens pesadas e com fontes 20% menores);
-- Compatibilidade testada em diferentes navegadores (Chrome, Firefox e Edge).
+## Entrega
 
-🛠️ _Melhoria contínua_: colocar variáveis globais com medidas responsivas para escalabilidade futura.
+A entrega deve ser feita disponibilizando um link para visualizar o projeto rodando em servidor remoto, credenciais de acesso ao painel o Wordpress, além de repositório para avaliação do código-fonte.
+Também esperamos receber um descritivo comentando como foi o processo de desenvolvimento deste desafio, incluindo as dificuldades e soluções encontradas.
 
-## ♿ Acessibilidade
+## Dúvidas?
 
-- Utilização do leitor de tela **NVDA** para testes;
-- `aria-roles`, elementos semânticos e estrutura acessível.
-
-Acredito na importância de construir interfaces inclusivas e acessíveis, e sigo aprendendo constantemente sobre esse tema.
-
-## 🔧 Configuração do Advanced Custom Fields
-
-- Organização dos Field Groups por template-part;
-- Site altamente customizavel pelo painel administrativo;
-- Facilidade para criação de planos e posts;
-- Facilidade para manutenção da página.
-
-🛠️ _Melhoria futura_: colocar campos e criar conteúdo para as páginas de posts.
-
-# 🧗‍♂️ Desafios e Soluções
-
-- **Gerenciar o tempo e escopo do projeto**
-  → Planejamento inicial com entregas divididas por dia.
-
-- **Fidelidade ao layout no Figma**
-  → Criação de CSS com foco no detalhamento visual e responsividade.
-
-- **ACF com Planos e Posts customizaveis**
-  → Criação dos campos, tipos de post e organização geral do ACF. Coloquei apenas os planos como Post Type e os Posts já são o Post Type padrão.
-
-- **JS do GoodThings**
-  → Funcionando e responsivo, mas poderia ter função de arrastar para mexer o slider.
-
-# ✅ Resultados Finais
-
-A aplicação permite:
-
-- Visualizar a página fiel ao figma;
-- Customizar e fazer alteração de conteúdo pelo painel administrativo;
-- Acessar de qualquer dispositivo com navegador e internet, desde que estaja rodando o localWP;
-- Usar com boa acessibilidade e responsividade.
-
-# 🧾 Conclusão
-
-Este projeto consolidou para mim a importância de:
-
-- Planejamento antes da implementação;
-- Desenvolvimento **mobile-first** com foco em responsividade;
-- Validação visual **fiel ao Figma**;
-- Boas práticas de **acessibilidade**, **usabilidade** e **semântica**;
-- Ter uma boa organização no ACF.
-
-Apesar dos desafios enfrentados e pontos que ainda posso melhorar (aprofundamento em ACF e organização) e terminar a parte de envio de e-mail do formulário com algum plugin do Wordpress, e considero que o projeto atinge seus objetivos e mostra meu comprometimento com entregas funcionais, organizadas e com qualidade de código.
-
-## Informações adicionais do Projeto
-
-- 📅 Início: 25 de setembro de 2025
-- ✅ Conclusão: 30 de setembro de 2025
-- ⏱️ Tempo estimado de desenvolvimento: 30 horas em 4 dias
-
-Com foco em:
-
-- Boas práticas de acessibilidade e semântica HTML
-- Mobile first e design responsivo
-- Organização dos campos do ACF
-- Alta customização e facilidade de alteração do conteúdo
-- Estrutura de código organizada e reutilizável
+É só entrar em contato conosco pelo email coopers@coopers.digital.
